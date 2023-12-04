@@ -1,0 +1,83 @@
+.headerContainer {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.headerLogo {
+  margin-left: 40px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: flex-start;
+}
+
+.firstButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+}
+
+.regularParagraph {
+  color: #666666;
+}
+
+.linkedParagraph {
+  color: #0073cf;
+}
+
+.linkedParagraph:hover {
+  color: #9f102d;
+  cursor: pointer;
+}
+
+.secondButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+.secondButton:hover {
+  color: #9f102d;
+  cursor: pointer;
+}
+
+.thirdButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+.thirdButton:hover {
+  color: #9f102d;
+  cursor: pointer;
+}
+
+.languageLogo {
+  margin-right: 40px;
+  cursor: pointer;
+}
