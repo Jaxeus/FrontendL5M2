@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import MainMenu from "./MainMenu";
 import TopMenu from "./TopMenu";
@@ -42,7 +42,7 @@ export default function Home() {
         ? tagResults.values.filter((item) => item.name === "car")
         : [];
 
-      console.log(response.data.tagResults);
+      console.log(response.data);
       if (carFilter.length > 0) {
         //Andrew helped with the above
         console.log("This is a car");
@@ -127,3 +127,5 @@ export default function Home() {
     </div>
   );
 }
+
+// https://www.seat.co.nz/content/dam/public/seat-website/models/tarraco/exterior-colours/tarracocclite-blueatlantic.png (working URL for API)
