@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Subscription } from "./pages/Subscription";
-import { Trucks } from "./pages/Trucks";
+import Home from "./pages/Home";
+import Subscription from "./pages/Subscription";
+import Trucks from "./pages/Trucks";
 
 function App() {
   return (
