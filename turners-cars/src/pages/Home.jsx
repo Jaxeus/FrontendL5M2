@@ -6,6 +6,7 @@ import TopMenu from "./TopMenu";
 import Header from "./Header";
 import axios from "axios";
 import { useState } from "react";
+import CarAnalysis from "./CarAnalysis";
 
 export default function Home() {
   const [imageUrl, setImageUrl] = useState("");
@@ -15,12 +16,6 @@ export default function Home() {
   const analyzeImage = async () => {
     const apiKey = process.env.REACT_APP_AZURE_API_KEY;
     const endpoint = process.env.REACT_APP_AZURE_ENDPOINT;
-    // const params = {
-    //   visualFeatures: "Categories,Description,Color",
-    //   details: "",
-    //   language: "en",
-    // };
-    // /vision/v3.1/analyze (cut)
     try {
       console.log(imageUrl);
       const response = await axios.post(
@@ -67,33 +62,6 @@ export default function Home() {
           <img width="300px" height="auto" alt="car" src={imageUrl} />
         );
       }
-
-      //-------------SET RESULT ONLY---------------//
-      // setResult(
-      //   response.data.tagsResult.values.filter((item) => item.name === "car")[0]
-      //     .name
-      // );
-
-      //--------------TRYING STUFF-------------//
-      // console.log(
-      //   response.data.tagsResult.values.filter((item) => item.name === "car")[0].name
-      // );
-      // if (response.data.tagsResult.values[3].name === "car") {
-      // console.log("This is a car");
-      // setResult(
-      //   `This is indeed a ${response.data.tagsResult.values[3].name}`
-      // );
-      // setCarImage(
-      //   <img width="200px" height="auto" alt="car" src={imageUrl} />
-      // );}
-      // else {
-      //   console.log("Not today, my friend");
-      // }
-      // console.log(response.data.tagsResult.values["name"]);
-      // setResult(
-      //   response.data.tagsResult.values.filter((item) => item.name === "car")[0]
-      //     .name
-      // );
     } catch (error) {
       console.error("Error analyzing image:", error);
     }
@@ -124,8 +92,11 @@ export default function Home() {
         )}
         <div>{carImage}</div>
       </div>
+      <CarAnalysis />
     </div>
   );
 }
 
 // https://www.seat.co.nz/content/dam/public/seat-website/models/tarraco/exterior-colours/tarracocclite-blueatlantic.png (working URL for API)
+
+// https://ichef.bbci.co.uk/news/976/cpsprodpb/178D6/production/_129407469_gettyimages-1248218509.jpg (working URL for API but of a cat)
