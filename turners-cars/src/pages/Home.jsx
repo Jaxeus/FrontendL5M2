@@ -10,7 +10,7 @@ import CarAnalysis from "./CarAnalysis";
 
 export default function Home() {
   const [imageUrl, setImageUrl] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(false);
   const [carImage, setCarImage] = useState(null);
 
   const analyzeImage = async () => {
