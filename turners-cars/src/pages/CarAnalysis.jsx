@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./CarAnalysis.module.css";
 import axios from "axios";
 import { useState } from "react";
+import { carBody, carColour } from "../utilities/variables";
 
 export default function CarAnalysis() {
   //useStates
@@ -47,6 +48,12 @@ export default function CarAnalysis() {
           <img width="300px" height="auto" alt="car" src={imageURL} />
         );
       }
+
+      //Working space for finding stock similarities
+      console.log("Show me response.data: ", response.data);
+
+      //Finish working space
+
       //Catch
     } catch (error) {
       console.log(error, "Server failed");
